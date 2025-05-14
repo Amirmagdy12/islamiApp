@@ -11,8 +11,6 @@ class HadethTab extends StatefulWidget {
 class _HadethTabState extends State<HadethTab> {
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
     return  CarouselSlider(
       options: CarouselOptions(height: 400.0),
       items: List.generate(50, (index)=>index+1).map((i) {

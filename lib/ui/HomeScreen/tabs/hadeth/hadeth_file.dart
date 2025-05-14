@@ -35,13 +35,11 @@ class _HadethFileState extends State<HadethFile> {
           color: AppColors.PrimaryColor
       ),
       child:hadeeth ==null?
-          Center(
-            child: CircularProgressIndicator(
-              color: AppColors.BlackColor,
-            ),
-          )
-      :Column(
-        children: [
+              ? Center(
+                child: CircularProgressIndicator(color: AppColors.BlackColor),
+              )
+              : Column(
+                children: [
           Text(hadeeth?.title??'',
           style: AppFonts.bold24black,),
           Text(hadeeth?.content??'',
@@ -52,7 +50,8 @@ class _HadethFileState extends State<HadethFile> {
   }
 
 void loadHadethFile (int index) async {
- String fileContent =await rootBundle.loadString('assets/files/Hadeeth/h$index.txt');
+  String fileContent = await rootBundle.loadString(
+      'assets/files/hadeth/h$index.txt');
  String title = fileContent.substring(0,fileContent.indexOf('\n'));
  String content = fileContent.substring(fileContent.indexOf('\n')+1);
  Hadeeth(title: title, content: content);

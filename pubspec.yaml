@@ -65,7 +65,7 @@ flutter:
   assets:
     - assets/images/
     - assets/files/
-    - assets/files/Hadeeth/
+    - assets/files/hadeth/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
