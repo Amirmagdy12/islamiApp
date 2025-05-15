@@ -35,7 +35,7 @@ class _HadethFileState extends State<HadethFile> {
           color: AppColors.PrimaryColor
       ),
       child:hadeeth ==null?
-              ? Center(
+              Center(
                 child: CircularProgressIndicator(color: AppColors.BlackColor),
               )
               : Column(
